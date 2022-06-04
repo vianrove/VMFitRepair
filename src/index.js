@@ -11,7 +11,7 @@ import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Request from "./pages/Request";
 import NotFound from './pages/NotFound';
-
+import PassReset from './pages/PassReset';
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
@@ -24,6 +24,7 @@ ReactDOM.render(
       <Route path="Register" element={<Register/>}/>
       <Route path="Request" element={<Request/>}/>
       <Route path="Cart" element={<Cart/>}/>
+      <Route path="PassReset" element={<PassReset/>}/>
       <Route path="*" element={<NotFound/>}/>
 
     </Routes>
