@@ -64,7 +64,7 @@ const Login = () => {
                 <Input placeholder="Contraseña" />
                 <Button>Ingresar</Button>
                 <Link>Recuperar contraseña</Link>
-                <Link>Crear cuenta</Link>
+                <Link href='/Register'>Crear cuenta</Link>
             </Form>
         </Wrapper>            
     </Container>

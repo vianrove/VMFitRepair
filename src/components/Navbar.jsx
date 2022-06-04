@@ -63,6 +63,8 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  text-decoration-line: none;
+  text-color: black;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -77,10 +79,10 @@ export const Navbar = () => {
             <Search />
           </SeacrchContainer>
         </Left>
-        <Center><Logo>VMFit</Logo></Center>
+        <Center><Logo >VMFit</Logo></Center>
         <Right> 
-          <MenuItem>REGISTRO</MenuItem>
-          <MenuItem>LOGIN</MenuItem>
+          <MenuItem><a href='/Register'>REGISTRO</a></MenuItem>
+          <MenuItem><a href='/Login'>LOGIN</a></MenuItem>
           <MenuItem>  
             <Badge badgeContent={4} color="primary">
               <ShoppingBasketOutlined color="action" />
