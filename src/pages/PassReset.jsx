@@ -61,13 +61,10 @@ const PassReset = () => {
   return (
     <Container>
         <Wrapper>
-            <Title>Ingresar</Title>
+            <Title>Recuperar Contraseña</Title>
             <Form>
-                <Input placeholder="Email" />
-                <Input placeholder="Contraseña" />
-                <Button>Ingresar</Button>
-                <StyledLink to="/PassReset">Recuperar contraseña</StyledLink>
-                <StyledLink to="/Register">Crear cuenta</StyledLink>
+                <Input placeholder="Digite su email" />
+                <Button>Enviar email</Button>
             </Form>
         </Wrapper>            
     </Container>
