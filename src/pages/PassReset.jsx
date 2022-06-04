@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { mobile } from '../responsive';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     width: 100vw;
@@ -57,8 +57,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
 `;
 
-
-const Login = () => {
+const PassReset = () => {
   return (
     <Container>
         <Wrapper>
@@ -75,4 +74,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default PassReset

@@ -6,7 +6,10 @@ import { Navbar } from '../components/Navbar'
 import { mobile } from '../responsive';
 
 const Container = styled.div`
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 
 const Wrapper = styled.div`
@@ -148,6 +151,63 @@ const Cart = () => {
             <Bottom>
 
                 <Info>
+                    <Product>
+                        <ProductDetail>
+                            <Image src="https://i.ibb.co/4mrZgCF/Figure-Dumbbell-Hantel.png"/>
+                            <Details>
+                                <Name><b>Product:</b> Mancuernas Hagel</Name>
+                                <Id><b>ID:</b> 218</Id>
+                                <Peso><b>Peso:</b> 25</Peso>
+                            </Details>
+                        </ProductDetail>
+                        <Price>
+                            <CantidadContainer>
+                                <Add />
+                                <Cantidad>2</Cantidad>
+                                <Remove />
+                            </CantidadContainer>
+                            <Total>180.000</Total>
+                        </Price>
+                    </Product>
+                    <hr />
+                    <Product>
+                        <ProductDetail>
+                            <Image src="https://i.ibb.co/4mrZgCF/Figure-Dumbbell-Hantel.png"/>
+                            <Details>
+                                <Name><b>Product:</b> Mancuernas Hagel</Name>
+                                <Id><b>ID:</b> 218</Id>
+                                <Peso><b>Peso:</b> 25</Peso>
+                            </Details>
+                        </ProductDetail>
+                        <Price>
+                            <CantidadContainer>
+                                <Add />
+                                <Cantidad>2</Cantidad>
+                                <Remove />
+                            </CantidadContainer>
+                            <Total>180.000</Total>
+                        </Price>
+                    </Product>
+                    <hr />
+                    <Product>
+                        <ProductDetail>
+                            <Image src="https://i.ibb.co/4mrZgCF/Figure-Dumbbell-Hantel.png"/>
+                            <Details>
+                                <Name><b>Product:</b> Mancuernas Hagel</Name>
+                                <Id><b>ID:</b> 218</Id>
+                                <Peso><b>Peso:</b> 25</Peso>
+                            </Details>
+                        </ProductDetail>
+                        <Price>
+                            <CantidadContainer>
+                                <Add />
+                                <Cantidad>2</Cantidad>
+                                <Remove />
+                            </CantidadContainer>
+                            <Total>180.000</Total>
+                        </Price>
+                    </Product>
+                    <hr />
                     <Product>
                         <ProductDetail>
                             <Image src="https://i.ibb.co/4mrZgCF/Figure-Dumbbell-Hantel.png"/>

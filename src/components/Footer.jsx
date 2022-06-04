@@ -1,6 +1,7 @@
-import styled from "styled-components"
-import { mobile } from "../responsive"
-//import Link from "react-router-dom"
+import styled from "styled-components";
+import { mobile } from "../responsive";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     background-color: #f8dfdf;
@@ -43,11 +44,17 @@ const Title = styled.h1`
     ${mobile({ fontSize: "18px" })}
 `;
 
-const Link = styled.a`
+const FooterLink = styled(Link)`
     cursor: pointer;
     text-decoration: underline;
+    color: black;
     margin: 10px 0px;
     ${mobile({ fontSize: "15px",  })}
+`;
+
+const LogoLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 
@@ -56,7 +63,7 @@ const Footer = () => {
     <Container>
         <Wrapper>
             <Left>
-                <Logo>VMFit</Logo>
+                <LogoLink to="/"><Logo>VMFit</Logo></LogoLink>
                 <Desc>Somos una empresa que se dedica a la venta y mantenimiento
                     de equipos de gimnasio. Con más de 10 años de experiencia nos
                     podemos comprometer a servir el mejor servicio!
@@ -64,8 +71,8 @@ const Footer = () => {
             </Left>
             <Right>
                 <Title>Nuestros servicios</Title>
-                <Link href="ProductList">Todos nuestros productos</Link>
-                <Link href="Request">Agendar una revisión</Link>
+                <FooterLink to="/ProductList">Todos nuestros productos</FooterLink>
+                <FooterLink to="/Request">Agendar una revisión</FooterLink>
             </Right>
         </Wrapper>
     </Container>
