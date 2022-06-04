@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { mobile } from "../responsive"
+//import Link from "react-router-dom"
 
 const Container = styled.div`
     background-color: #f8dfdf;
@@ -63,8 +64,8 @@ const Footer = () => {
             </Left>
             <Right>
                 <Title>Nuestros servicios</Title>
-                <Link>Todos nuestros productos</Link>
-                <Link>Agendar una revisión</Link>
+                <Link href="ProductList">Todos nuestros productos</Link>
+                <Link href="Request">Agendar una revisión</Link>
             </Right>
         </Wrapper>
     </Container>
