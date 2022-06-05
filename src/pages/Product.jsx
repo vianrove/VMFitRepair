@@ -5,15 +5,24 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { mobile } from "../responsive";
+import React from "react";
+import {Link, useParams } from "react-router-dom"
+import { getProduct } from "../data";
 
 const Container = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 `;
 
 const Wrapper = styled.div`
     padding: 50px;
     display: flex;
     ${mobile({ flexDirection: "column" })}
+`;
+const TopBanners = styled.div`
+
 `;
 
 const ImgContainer = styled.div`
@@ -96,24 +105,27 @@ const Button = styled.button`
     }
 `;
 
+const StyledLink = styled(Link)`
 
+`;
 
 const Product = () => {
+    let params = useParams();
+    let product = getProduct(parseInt(params.productId, 10));
   return (
     <Container>
-        <Navbar />
-        <Announcement />
+        <TopBanners>
+            <Navbar />
+            <Announcement />
+        </TopBanners>
         <Wrapper>
             <ImgContainer>
-                <Image src="https://i.ibb.co/4mrZgCF/Figure-Dumbbell-Hantel.png" />
+                <Image src={product.img} />
             </ImgContainer>
             <InfoContainer>
-                <Title>Mancuernas Hantel</Title>
-                <Desc>Set de mancuernas marca Hantel. Con recubrimiento
-                    de goma que añade seguridad y una calidad 
-                    excepcional.
-                </Desc>
-                <Price>COP 180.000</Price>
+                <Title>{product.name}</Title>
+                <Desc>{product.desc}</Desc>
+                <Price>COP {product.price}</Price>
                 <FilterContainer>
                     <FilterTitle>Peso</FilterTitle>
                     <Select>
@@ -131,7 +143,7 @@ const Product = () => {
                         <Amount>1</Amount>
                         <Add />
                     </AmountContainer>
-                    <Button>Agregar al carrito</Button>
+                    <StyledLink to="/Cart"><Button>Agregar al carrito</Button></StyledLink>
                 </AddContainer>
             </InfoContainer>
         </Wrapper>

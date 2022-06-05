@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { mobile } from '../responsive';
 
@@ -47,14 +45,6 @@ const Button = styled.button`
     background-color: #f8dfdf;
     color: black;
     cursor: pointer;
-`;
-
-const StyledLink = styled(Link)`
-    margin: 5px 0px;
-    font-size: 12px;
-    text-decoration: underline;
-    color: black;
-    text-decoration: none;
 `;
 
 const PassReset = () => {

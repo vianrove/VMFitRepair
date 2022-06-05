@@ -20,7 +20,9 @@ ReactDOM.render(
       <Route path="/" element={<Home/>} />
       <Route path="Login" element={<Login/>}/>
       <Route path="ProductList" element={<ProductList/>}/>
-      <Route path="Product" element={<Product/>}/>
+      <Route path="Product" element={<Product/>}>
+        <Route path=":productId" element={<Product />}/>
+      </Route>
       <Route path="Register" element={<Register/>}/>
       <Route path="Request" element={<Request/>}/>
       <Route path="Cart" element={<Cart/>}/>

@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import React from "react";
+import { Link } from "react-router-dom"
 
-const Container = styled.div`
+const Container = styled.span`
     height: 30px;
     background-color: salmon;
     color: white;
@@ -13,9 +15,14 @@ const Container = styled.div`
 
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+`;
+
 const Announcement = () => {
   return (
-    <Container>ENVÍOS GRATIS POR COMPRAS SUPERIORES A 125.000</Container>
+    <Container><StyledLink to="/ProductList">ENVÍOS GRATIS POR COMPRAS SUPERIORES A 125.000</StyledLink></Container>
   )
 }
 
